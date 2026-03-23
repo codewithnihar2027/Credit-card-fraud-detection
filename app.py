@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import pickle
+import joblib
 import matplotlib.pyplot as plt
 import seaborn as sns
 
@@ -21,7 +21,7 @@ st.set_page_config(
 # -------------------------
 @st.cache_resource
 def load_model():
-    return pickle.load(open("model.pkl", "rb"))
+    return joblib.load("model.pkl")
 
 model = load_model()
 
