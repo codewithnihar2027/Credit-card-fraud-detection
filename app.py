@@ -22,7 +22,7 @@ st.set_page_config(
 @st.cache_resource
 def load_model():
     try:
-        return joblib.load("model.joblib")
+        return joblib.load("model.pkl")
     except Exception as e:
         st.error(f"Model load error: {e}")
         return None
